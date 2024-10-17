@@ -1,0 +1,9 @@
+function ehPalindromo(palavra) {
+    const palavraSemEspacos = palavra.replace(/\s/g, '').toLowerCase();
+    const palavraInvertida = palavraSemEspacos.split('').reverse().join('');
+    return palavraSemEspacos === palavraInvertida;
+  }
+console.log(ehPalindromo("ana")); // true
+console.log(ehPalindromo("racificar")); // true
+console.log(ehPalindromo("ovo")); // true
+console.log(ehPalindromo("Eduardo")); // false
