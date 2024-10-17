@@ -1,0 +1,12 @@
+function contarOcorrencias(array) {
+    const contagem = {};
+    for (let i = 0; i < array.length; i++) {
+      const numero = array[i];
+      if (contagem[numero]) {
+        contagem[numero]++;
+      } else {
+        contagem[numero] = 1;
+      }
+    }
+   return contagem;
+  }
