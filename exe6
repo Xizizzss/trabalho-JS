@@ -1,0 +1,12 @@
+function substituirElemento(array, valorAntigo, novoValor) {
+    for (let i = 0; i < array.length; i++) {
+      if (array[i] === valorAntigo) {
+        array[i] = novoValor;
+      }
+    }
+    return array;
+  }
+const veiculos = ['carro', 'moto', 'caminhão', 'moto'];
+const novosveiculos = substituirElemento(veiculos, 'moto', 'carro');
+
+console.log(novosveiculos); 
