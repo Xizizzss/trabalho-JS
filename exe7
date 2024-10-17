@@ -1,0 +1,24 @@
+function multiplicarMatrizes(matrizA, matrizB) {
+    if (matrizA[0].length !== matrizB.length) {
+      return "A multiplicação não é possível.";
+    }
+    const resultado = [];
+    for (let i = 0; i < matrizA.length; i++) {
+      resultado[i] = [];
+      for (let j = 0; j < matrizB[0].length; j++) {
+        resultado[i][j] = 0;
+      }
+    }
+    for (let i = 0; i < matrizA.length; i++) {
+      for (let j = 0; j < matrizB[0].length; j++) {
+        for (let k = 0; k < matrizA[0].length; k++) {
+          resultado[i][j] += matrizA[i][k] * matrizB[k][j];
+        }
+      }
+    }
+    return resultado;
+  }
+  const matrizA = [[7, 5, 1], [9, 2, 7]];
+const matrizB = [[3, 8], [9, 13], [2, 12]];
+const resultado = multiplicarMatrizes(matrizA, matrizB);
+console.log(resultado);
